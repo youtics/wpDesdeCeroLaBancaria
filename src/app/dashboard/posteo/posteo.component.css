@@ -1,0 +1,14 @@
+img.mat-card-image {
+    width: 100%;
+    background-size: cover;
+  }
+  
+  .mat-card-subtitle {
+    color: rgb(124, 232, 223);
+  }
+  .example-card {
+    max-width: 400px;
+    background-color: rgb(190, 181, 181);
+    text-align: justify;
+  }
+  

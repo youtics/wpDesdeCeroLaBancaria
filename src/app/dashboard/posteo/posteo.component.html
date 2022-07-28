@@ -1,0 +1,16 @@
+<div class="container p-4">
+    <div class="card" col-3>
+      <img matCardImage [src]="img" 
+            class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">    
+            {{titulo}}
+        </h5>
+        <h3>{{fecha}}</h3>
+        <p class="card-text justificado" [innerHTML]="contenido"></p>
+        <button class="btn btn-primary btn-block btn-xl" routerLink="/dashboard">
+            VOLVER
+        </button>
+      </div>
+    </div>
+  </div>
