@@ -26,8 +26,8 @@ export class CardPostComponent implements OnInit {
   ApiCategoria()
   {
     this.id = this.post.id;
-    //this.img = this.postComercios['_links']['wp:featuredmedia'][0].href;
-    this.contenido = this.post.content.rendered;
+    this.img = this.post.custom.featured_image;
+    this.contenido = this.post.excerpt.rendered;
     this.titulo = this.post.title.rendered;
     this.fecha = this.post.date;
   }
@@ -39,10 +39,5 @@ export class CardPostComponent implements OnInit {
     this.contenido = this.post.content;
     this.titulo = this.post.title;
     this.fecha = this.post.date;
-  }
-
-  VerPost(id:number)
-  {
-    this.router.navigate(['/posteo']);
   }
 }

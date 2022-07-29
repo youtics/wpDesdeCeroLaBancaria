@@ -21,17 +21,17 @@ export class PosteoComponent implements OnInit {
 
   ngOnInit() {
     
-    console.log(this.id);
     this.ApiCategoria();
   }
   ApiCategoria(): void {
     this.servivioApi.getPost(this.id).subscribe(data => {
       console.log(data);
       this.id = data.id;
-      this.img = data['_links']['wp:featuredmedia'].href;
+      this.img = data.custom.featured_image;
       this.contenido = data.content.rendered;
       this.titulo = data.title.rendered;
       this.fecha = data.date;
+      console.log("Imagen "+this.contenido);
     });
   }
 

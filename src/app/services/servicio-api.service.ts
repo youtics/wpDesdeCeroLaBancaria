@@ -9,13 +9,13 @@ export class ServicioApiService {
 
   constructor(private http: HttpClient) { }
 
-  urlApi = 'https://bancariamdp.org.ar/wp-json/wp/v2/posts?filter[cat]=34';
-  urlApiId = 'https://bancariamdp.org.ar/wp-json/wp/v2/posts/';
+  urlApi = 'https://labancaria.obliviondev.com.ar/wp-json/wp/v2/posts?categories=28'
+  urlApiId = 'https://labancaria.obliviondev.com.ar/wp-json/wp/v2/posts/';
 
   getPosts(): Observable<any[]> {
     return this.http.get<any[]>(this.urlApi, {
       params: {
-        per_page: '9'
+        per_page: '15'
       } 
     });
   }

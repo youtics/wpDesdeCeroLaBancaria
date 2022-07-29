@@ -1,5 +1,7 @@
-<div class="row">
-    <div *ngFor="let lpost of listPost" class="col-lg-3" style="margin: 30px;">
-        <app-card-post [post]="lpost"></app-card-post>
+<div class="container principal">
+  <div class="row">
+        <div *ngFor="let lpost of listPost" class="col-lg-4 col-md-12 mb-4">
+            <app-card-post [post]="lpost"></app-card-post>
+        </div>
     </div>
 </div>

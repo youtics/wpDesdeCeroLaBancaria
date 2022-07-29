@@ -1,14 +1,26 @@
-<div class="container p-4">
-    <div class="card" col-3>
-      <img matCardImage [src]="img" 
-            class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">    
-            {{titulo}}
-        </h5>
-        <h3>{{fecha}}</h3>
-        <p class="card-text justificado" [innerHTML]="contenido"></p>
-        <a routerLink="posteo/{{id}}" class="btn btn-primary">+ info</a>
+      <!-- <div class="card">
+        <div class="card-header">
+          <img matCardImage [src]="img" class="card-img-top">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{titulo}}</h5>
+          <p class="card-text justificado" [innerHTML]="contenido"></p>
+        </div>
+          <div class="card-footer">
+            <a routerLink="posteo/{{id}}" class="btn btn-primary">+ info</a>
+          </div>
+      </div> -->
+
+      <div class="card-section card-section-first border rounded">
+        <img matCardImage [src]="img" class="card-img-top">
+        <div class="card-header card-header-first rounded">
+            <h2 class="card-header-title mb-3 text-white">{{titulo}}</h2>
+        </div>
+        <div class="card-body text-center mb-2">
+           <p class="card-text" [innerHTML]="contenido"></p>
+           <hr>
+        </div>
+        <div class="card-footer">
+          <a routerLink="posteo/{{id}}" class="btn btn-primary">+ info</a>
+        </div>
       </div>
-    </div>
-  </div>

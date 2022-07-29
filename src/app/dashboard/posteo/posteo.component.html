@@ -1,16 +1,36 @@
-<div class="container p-4">
-    <div class="card" col-3>
-      <img matCardImage [src]="img" 
-            class="card-img-top">
+<!-- <div class="container p-4">
+    <div class="card">
+      <img matCardImage [src]="img" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">    
             {{titulo}}
         </h5>
-        <h3>{{fecha}}</h3>
+        <h3>{{fecha | date}}</h3>
         <p class="card-text justificado" [innerHTML]="contenido"></p>
         <button class="btn btn-primary btn-block btn-xl" routerLink="/dashboard">
             VOLVER
         </button>
       </div>
     </div>
+  </div> -->
+<div class="container principal">
+  <div class="row">
+    <div class="col-lg-4 col-md-12 mb-4">
+      <div class="card-section card-section-first border rounded">
+        <img matCardImage [src]="img" class="card-img-top">
+        <div class="card-header card-header-first rounded">
+            <h2 class="card-header-title mb-3 text-white">{{titulo}}</h2>
+        </div>
+        <div class="card-body text-center mb-2">
+          <p class="card-text justificado" [innerHTML]="contenido"></p>
+          <hr>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary btn-block btn-xl" routerLink="/dashboard">
+            VOLVER
+        </button>
+        </div>
+      </div>
+   </div>
+  </div>
   </div>
