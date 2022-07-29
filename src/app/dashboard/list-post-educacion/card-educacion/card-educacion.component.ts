@@ -1,12 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-card-post',
-  templateUrl: './card-post.component.html',
-  styleUrls: ['./card-post.component.css']
+  selector: 'app-card-educacion',
+  templateUrl: './card-educacion.component.html',
+  styleUrls: ['./card-educacion.component.css']
 })
-export class CardPostComponent implements OnInit {
+export class CardEducacionComponent implements OnInit {
 
   @Input() post: any;
 
@@ -32,12 +31,4 @@ export class CardPostComponent implements OnInit {
     this.fecha = this.post.date;
   }
 
-  ApiPlugin()
-  {
-    this.id = this.post.id;
-    this.img = this.post.image;
-    this.contenido = this.post.content;
-    this.titulo = this.post.title;
-    this.fecha = this.post.date;
-  }
 }
