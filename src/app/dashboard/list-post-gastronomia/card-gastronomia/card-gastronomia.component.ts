@@ -25,7 +25,8 @@ export class CardGastronomiaComponent implements OnInit {
   ApiCategoria()
   {
     this.id = this.post.id;
-    this.img = this.post.custom.featured_image;
+    //this.img = this.post.custom.featured_image;
+    this.img = this.post._embedded['wp:featuredmedia']['0'].source_url;
     this.contenido = this.post.excerpt.rendered;
     this.titulo = this.post.title.rendered;
     this.fecha = this.post.date;

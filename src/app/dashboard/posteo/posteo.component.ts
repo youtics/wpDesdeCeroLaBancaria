@@ -19,19 +19,20 @@ export class PosteoComponent implements OnInit {
     this.id = this.aRoute.snapshot.params['id'];
   }
 
-  ngOnInit() {
-    
+  ngOnInit() { 
     this.ApiCategoria();
   }
+
   ApiCategoria(): void {
     this.servivioApi.getPost(this.id).subscribe(data => {
       console.log(data);
       this.id = data.id;
-      this.img = data.custom.featured_image;
+      //this.img = data.custom.featured_image;
+      this.img = data._embedded['wp:featuredmedia']['0'].source_url;
       this.contenido = data.content.rendered;
       this.titulo = data.title.rendered;
       this.fecha = data.date;
-      console.log("Imagen "+this.contenido);
+      //console.log("Imagen "+this.contenido);
     });
   }
 

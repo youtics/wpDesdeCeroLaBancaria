@@ -10,6 +10,7 @@ export class ListPostDeportesComponent implements OnInit {
 
   listPost: any[] = [];
   loading = true;
+  
   constructor(private apiService: ServicioApiService) { }
 
   ngOnInit(): void {
@@ -19,6 +20,7 @@ export class ListPostDeportesComponent implements OnInit {
   getPost(): void {
     this.apiService.getPostsDeportes().subscribe(data => {
       this.listPost = data;
+      console.log(data)
       this.loading = false;
     });
   }
